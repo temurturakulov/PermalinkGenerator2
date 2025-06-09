@@ -1,5 +1,4 @@
-﻿
-using FM.Cinema.Core.Domain.Entities.Public;
+﻿using FM.Cinema.Core.Domain.Entities.Public;
 using FM.Cinema.Core.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
@@ -102,10 +101,6 @@ public class ContentPermalinkUpdater(
 
     private string GeneratePermalink(Content item)
     {
-        var text1 = "Hello 안녕하세요";
-        var text2 = "Hello World";
-        Console.WriteLine(ContainsKorean(text1));
-        Console.WriteLine(ContainsKorean(text2));
         string? raw = null;
 
         if (!string.IsNullOrWhiteSpace(item.NameEn) && !ContainsKorean(item.NameEn))
@@ -148,8 +143,6 @@ public class ContentPermalinkUpdater(
         input = Regex.Replace(input, @"-+", "-");
         return input.Trim('-');
     }
-
-
 
     private static string ToKebabCase(string input)
     {

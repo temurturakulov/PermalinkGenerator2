@@ -119,9 +119,9 @@ public class Program
             options.ConfigureWarnings(cw =>
             {
                 cw.Ignore(
-                    new EventId(10400), // Infrastructure.SensitiveDataLoggingEnabledWarning
-                    new EventId(10622), // PossibleIncorrectRequiredNavigationWithQueryFilterInteractionWarning
-                    new EventId(20504) // Query.MultipleCollectionIncludeWarning
+                    new EventId(10400),
+                    new EventId(10622),
+                    new EventId(20504)
                 );
             });
 
